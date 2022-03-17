@@ -1,0 +1,163 @@
+
+/* ================= CSS Variables ================ */
+
+
+:root {
+ --header-height: 3rem;
+
+ /* Main Color */
+--hue:250;
+
+ /* HSL Colors  */
+
+ --mainColor: hsl(var(--hue), 71%, 43%);
+ --mainColorAlt:hsl(var(--hue), 57%, 53%);
+ --mainColorLight: hsl(var(--hue), 91%, 85%);
+ --titleColor: hsl(var(--hue), 8%, 15%);
+ --textColor: hsl(var(--hue), 8%, 45%) ;
+ --textColorLight: hsl(var(--hue), 8%, 65%) ;
+ --inputColor: hsl(var(--hue), 71%, 96%);
+ --bodyColor:hsl(var(--hue), 63%, 99%) ;
+ --divColor:#FFF;
+
+ /* Typo */
+--bodyFont: 'Poppins', sans-serif;
+
+/* Weights */
+--medium:500;
+--semiBold: 600;
+
+/* Sizes */
+
+--big:2rem;
+--h1Size:1.5rem;
+--h2Size:1.25rem;
+--h3Size:1.125rem;
+--regular:.938rem;
+--small:.813rem;
+--smaller:.75rem;
+
+/* Bottom Margins */
+
+--mb025:.25rem;
+--mb05:.50rem;
+--mb075:.75rem;
+--mb1:1rem;
+--mb15:1.5rem;
+--mb2:2rem;
+--mb25:2.5rem;
+--mb3:3rem;
+
+
+/* Z Index */
+
+--tooltip:10;
+--fixed:100;
+--modal:100;
+
+/* Font Size (Large Devices) */
+
+@media screen and (min-width: 968px)
+
+:root{
+ --big:3rem;
+ --h1Size:2.25rem;
+ --h2Size:1.5rem;
+ --h3Size:1.25rem;
+ --regular:1rem;
+ --small:.875rem;
+ --smaller:.813rem;
+}
+
+}
+
+/* =================== GLOBAL CSS ====================== */
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+body{
+ font-family: var(--bodyFont);
+/* font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+background-color: var(--bodyColor);
+font-size: var(--regular);
+color:var(--textColor);
+}
+
+h1,h2,h3,h4{
+ color: var(--titleColor);
+ font-weight: var(--semiBold);
+}
+
+ul {
+ list-style: none;
+}
+li{
+ list-style: none;
+}
+
+a {
+ text-decoration: none;
+
+}
+
+img{
+ max-width: 100%;
+ height: auto;
+}
+
+
+/* ======================== REUSABLE  ============================= */
+
+.section{
+ padding: 2rem 0 4rem;
+}
+
+.sectionTitle{
+ font-size: var(--h1Size);
+ 
+}
+
+.sectionSubtitle{
+ display: block;
+ font-size: var(--small);
+ margin-bottom: var(--mb3);
+}
+
+
+
+
+
+
+.sectionTitle, .sectionSubtitle {
+ text-align: center;
+}
+
+
+/* ======================== LAYOUT  ============================= */
+
+.container {
+ max-width: 768px;
+margin-left: var(--mb15);
+margin-right: var(--mb15);
+}
+
+
+.grid{
+ display: grid;
+ gap:1.5rem;
+}
+
+
+
+
+
