@@ -157,7 +157,65 @@ margin-right: var(--mb15);
  gap:1.5rem;
 }
 
+.header {
+ width: 100%;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ z-index: var(--fixed);
+ background-color: var(--bodyColor);
+}
+
+/* ======================== NAV  ============================= */
 
 
+.nav {
+ max-width: 968px;
+ height: var(--header-height);
+ display: flex;
+ justify-content: space-between;
+ align-items:center ;
+}
 
+.navLogo, .navToggle{
+ color: var(--titleColor);
+ font-weight: var(--medium);
 
+}
+
+.navLogo:hover{
+ color: var(--mainColor);
+}
+
+.navToggle{
+ font-size: 1.1rem;
+ cursor: pointer;
+}
+
+.navToggle:hover{
+ color: var(--mainColor);
+}
+
+@media screen and (max-width: 767px) {
+ .navMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bodyColor);
+  padding: 2rem 1.5rem 2rem;
+  box-shadow: 0 -3px 11px rgba(0, 0, 0, .2);
+  border-radius: 1.5rem 1.5rem 0 0;
+  transition: .3s;
+ }
+}
+.navItem{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.navList{
+ grid-template-columns: repeat(3, 1fr);
+ gap: 2rem;
+}
