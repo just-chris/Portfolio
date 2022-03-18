@@ -24,3 +24,15 @@ if (navClose) {
  })
 }
 
+
+// =================== REMOVE MENU MOBILE
+
+const navLink = document.querySelectorAll('.navLink')
+
+function linkAction (){
+ const navMenu = document.getElementById('navMenu')
+ navMenu.classList.remove('showMenu')
+}
+
+navLink.forEach (n => n.addEventListener('click', linkAction))
+
