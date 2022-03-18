@@ -6,7 +6,7 @@
  --header-height: 3rem;
 
  /* Main Color */
---hue:327;
+--hue:333;
 
  /* HSL Colors  */
 
@@ -289,9 +289,120 @@ margin-right: var(--mb15);
 }
 
 .homeBlobImg{
- width: 170px;
+  width: 450px; 
 
 }
 .homeData {
  grid-column: 1/3;
+}
+
+.homeTitle{
+ font-size: var(--big);
+}
+
+.homeSubtitle{
+ font-size: var(--h3Size);
+ color: var(--textColor);
+ font-weight: var(--medium);
+ margin-bottom: var(--mb075);
+}
+
+.homeDescription{
+ margin-bottom: var(--mb2);
+}
+
+.homeScroll{
+  display: none; 
+} 
+
+.home-scroll-button{
+ color: var(--mainColor);
+ transition: .3s;
+}
+
+.home-scroll-button:hover{
+ transform: translateY(.25rem)
+}
+
+.home-scroll-mouse{
+ font-size: 2rem;
+}
+
+.home-scroll-name{
+ font-size: var(--small);
+ color: var(--titleColor);
+ font-weight: var(--medium);
+ margin-right: var(--mb025);
+}
+
+.home-scroll-arrow {
+ font-size: 1.25rem;
+}
+
+
+/* ========================  BUTTONS  ============================= */
+
+.button{
+ display: inline-block;
+ background-color: var(--mainColor);
+ color: #FFF;
+ padding: 1rem;
+ border-radius: .5rem;
+ font-weight: var(--medium);
+}
+
+.button:hover{
+ background-color:var(--mainColorAlt) ;
+}
+
+.button-icon{
+ font-size: 1.25rem;
+ margin-left: var(--mb05);
+ transition: .3s;
+}
+
+.button-flex{
+ display: inline-flex;
+ align-items: center;
+}
+
+/* ========================  ABOUT  ============================= */
+
+.aboutImg{
+ border-radius: 50%;
+ width: 700px;
+ justify-self: center;
+ align-self: center;
+}
+
+.aboutDescription{
+ text-align: center;
+ margin-bottom: var(--mb25);
+}
+
+.aboutInfo{
+ display: flex;
+ justify-content: space-evenly;
+ margin-bottom: var(--mb25);
+}
+
+.about-info-title{
+ font-size: var(--h2Size);
+ font-weight: var(--semiBold);
+ color: var(--titleColor);
+}
+.about-info-name{
+ font-size: var(--smaller);
+}
+
+.about-info-title,
+.about-info-name{
+ display: block;
+ text-align: center;
+
+}
+
+.aboutButtons{
+ display: flex;
+ justify-content: center;
 }
