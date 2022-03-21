@@ -366,6 +366,22 @@ margin-right: var(--mb15);
  align-items: center;
 }
 
+
+.button-small{
+  padding: .75rem 1rem;
+}
+
+.button-link{
+  padding: 0;
+  background-color: transparent;
+  color: var(--mainColor);
+}
+
+.button-link:hover{
+  padding: 0;
+  background-color: transparent;
+  color: var(--mainColorAlt);
+}
 /* ========================  ABOUT  ============================= */
 
 .aboutImg{
@@ -406,3 +422,202 @@ margin-right: var(--mb15);
  display: flex;
  justify-content: center;
 }
+
+/* ========================  SKILLS  ============================= */
+
+
+
+.skillsContainer{
+  row-gap: 0;
+}
+
+.skillsHeader{
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb25);
+  cursor: pointer;
+}
+
+.skillsIcon, .skillsArrow{
+  font-size: 2rem;
+  color: var(--mainColor);
+}
+
+.skillsIcon{
+  margin-right: var(--mb075);
+}
+.skillsTitle{
+  font-size: var(--h3Size);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb05);
+}
+
+.skillsSubtitle{
+  font-size: var(--small);
+  color:var(--textColorLight) ;
+}
+
+.skillsArrow{
+  margin-left: auto;
+  transition: .4s;
+}
+.skillsList{
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skillsName{
+  font-size: var(--regular);
+font-weight: var(--medium);
+}
+.skillsBar, .skillsPercentage{
+  height: 5px;
+  border-radius: .25rem;
+}
+
+.skillsBar{
+  background-color: var(--mainColorLight);
+}
+
+.skillsPercentage{
+  display: block;
+  background-color: var(--mainColor);
+}
+
+.skillsHTML{
+  width: 90%;
+}
+
+.skillsCSS{
+  width: 77%;
+}
+
+.skillsJS{
+  width: 44%;
+}
+
+.skillsREACT{
+  width: 13%;
+}
+
+.skillsClose .skillsList{
+  height: 0;
+  overflow: hidden;
+}
+
+
+.skillsOpen .skillsList{
+  height: max-content;
+  margin-bottom: var(--mb25);
+}
+
+.skillsOpen .skillsArrow{
+  transform: rotate(-180deg);
+}
+
+/* ========================  SERVICES  ============================= */
+
+.servicesContainer{
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.servicesContent{
+  position: relative;
+  background-color: var(--divColor);
+  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+  transition: .3s;
+}
+
+.servicesContent:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+
+}
+
+.servicesIcon{
+  display: block;
+  font-size: 1.5rem;
+  color:var(--mainColor);
+  margin-bottom: var(--mb1);
+}
+
+.servicesTitle{
+  font-size: var(--h3Size);
+  margin-bottom: var(--mb1);
+  font-weight: var(--medium);
+}
+
+.servicesButton {
+  cursor: pointer;
+  font-size: var(--small);
+
+}
+
+.servicesButton:hover .buttonIcon{
+  transform: translateX(.25rem);
+}
+
+.servicesModal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--modal);
+  opacity: 0;
+  visibility: hidden; 
+  transition: .3s;
+}
+
+.services-modal-content{
+  position: relative;
+  background-color: var(--divColor);
+  padding: 1.5rem;
+  border-radius: .5rem;
+
+}
+
+.services-modal-services{
+  row-gap: 1rem;
+}
+
+.services-modal-service{
+  display: flex;
+  }
+
+  .services-modal-title{
+    font-size: var(--h3Size);
+    font-weight: var(--medium);
+    margin-bottom: var(--mb15);
+  }
+
+  .services-modal-close{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--mainColor);
+  }
+
+  .services-modal-icon{
+    color: var(--mainColor);
+    margin-right: var(--mb025);
+  }
+
+  
+  /* ACTIVE MODAL */
+
+
+  .activeModal{
+    opacity: 1;
+    visibility: visible;
+  }
