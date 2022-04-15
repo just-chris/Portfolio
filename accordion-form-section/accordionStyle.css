@@ -78,6 +78,7 @@ label {
 	border-radius: 0.5rem;
 	width: 100%;
 	height: auto;
+	padding: 3rem;
 }
 
 #accordionContainer .accordion {
