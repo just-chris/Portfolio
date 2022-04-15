@@ -8,68 +8,114 @@
 }
 
 body {
-	background: #420039;
+	background: #dcccff;
 }
 
 header {
-	background: #dcccff;
+	background: #932f6d;
 	height: 10vh;
+	margin: 1rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	border-bottom-left-radius: 0.5rem;
-	border-bottom-right-radius: 0.5rem;
+	border-radius: 0.5rem;
 }
 
 h1 {
-	color: #420039;
+	color: #dcccff;
+	font-weight: 500;
 }
 
-section {
+form {
 	height: 90vh;
+	background: #dcccff;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
-#accordion {
-	background: #932f6d;
+input[type="text"],
+input[type="integer"],
+input[type="email"],
+select,
+option {
+	outline: none;
+	width: 14rem;
+	border-radius: 3px;
+	border: 1px solid rgba(147, 47, 109, 0.33);
+	padding: 3px 11px;
+	color: #420039;
+	font-weight: 400;
+}
+
+input[type="integer"] {
+	width: auto;
+}
+
+select {
+	width: auto;
+}
+
+label {
+	color: #932f6d;
+	font-weight: 300;
+	margin-left: 1rem;
+	white-space: nowrap;
+}
+
+#accordionContainer {
+	background: #dcccff;
 	border-radius: 0.5rem;
-	width: 600px;
+	width: 100%;
+	height: auto;
 }
 
-#accordion li {
-	list-style: none;
+#accordionContainer .accordion {
 	width: 100%;
 	padding: 1.3rem;
+	position: relative;
 }
 
-#accordion li h3 {
+#accordionContainer .accordion h3 {
 	font-weight: 400;
 	cursor: pointer;
+	position: relative;
 	display: flex;
 	justify-content: space-between;
+	padding: 1rem;
+	background: #932f6d;
+	color: #dcccff;
+	border-radius: 0.5rem;
 }
 
-#accordion li h3 span {
+#accordionContainer .accordion h3 span {
 	transform: rotate(90deg);
 	font-weight: 500;
 }
 
-#accordion li h3 + input[type="radio"] {
-	display: none;
+#accordionContainer .accordion .content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	padding-top: 3.3rem;
+	transition: ease-in-out 0.2s;
+	overflow-y: auto;
 }
 
-#accordion .content {
-	padding-top: 1rem;
-	line-height: 26px;
-	max-height: 0;
+#accordionContainer .accordion .content .contentItems {
+	padding-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+}
+
+#accordionContainer .accordion .content .contentItems .contentItemsLabel {
+	width: 150px;
+}
+
+#accordionContainer .accordion .accordionToggle.active + .content {
+	height: 0;
 	overflow: hidden;
-	transition: max-height 0.1s;
-}
-
-#accordion li h3 + input[type="radio"]:checked + .content {
-	max-height: 100%;
 }
