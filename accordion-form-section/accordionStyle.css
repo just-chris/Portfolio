@@ -36,6 +36,14 @@ form {
 	align-items: flex-start;
 }
 
+div {
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
 input[type="text"],
 input[type="integer"],
 input[type="email"],
@@ -118,4 +126,5 @@ label {
 #accordionContainer .accordion .accordionToggle.active + .content {
 	height: 0;
 	overflow: hidden;
+	padding: 0;
 }
