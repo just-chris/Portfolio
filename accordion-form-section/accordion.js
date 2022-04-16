@@ -6,20 +6,17 @@ for (i = 0; i < accordion.length; i++) {
 	});
 }
 
-// const accordion = ;
+// const style = document.documentElement.style;
 
-// accordion.addEventListener("click", function expand() {
-// 	document.getElementsByClassName("contentItems").stlye.display = "none";
-// });
-// const accordionToggle = document.getElementsByClassName("contentItems");
+//const darkTheme = () => {
+// style.setProperty("var(--background)", "#0f1020");
+// style.setProperty("--labels", "#dcccff");
+// style.setProperty("--inputBack", "#212345");
+// style.setProperty("--borders", "rgba(255, 255, 255, 0.1)");
+// style.setProperty("--textInput", "#dcccff");
 
-// const accordionContainer =
-// 	document.getElementsByClassName("accordionContainer");
-// const accordionToggle = document.getElementsByClassName("accordionToggle");
-// const content = document.getElementsByClassName("content");
-
-// accordionToggle.addEventListener("click", function expand() {
-// 	for (i = 0; i < content.length; i++) {
-// 		content[i].style.display = "none";
-// 	}
-// });
+// style.setProperty("--background", "#dcccff");
+// style.setProperty("--labels", "##932f6d");
+// style.setProperty("--inputBack", "#FFF");
+// style.setProperty("--borders", "rgba(147, 47, 109, 0.33)");
+// style.setProperty("--textInput", "#420039");

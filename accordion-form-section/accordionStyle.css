@@ -1,18 +1,44 @@
+/* ============================= UNIVERSALS ========================= */
+:root {
+	scroll-behavior: smooth;
+
+	/* ================= LIGHT MODE */
+
+	--background: #dcccff;
+	--h1h3: #dcccff;
+	--headings: #932f6d;
+	--labels: #932f6d;
+	--borders: rgba(147, 47, 109, 0.33);
+	--textInput: #420039;
+	--inputBack: #fff;
+	--switchLight: #c7adff;
+
+	/* =================== DARK MODE */
+
+	--backgroundDark: #0f1020;
+	--bordersDark: rgba(255, 255, 255, 0.1);
+	--inputBackDark: #212345;
+	--labelsDark: #dcccff;
+	--textInputDark: #dcccff;
+	--switchDark: #932f6d;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
-	color: #fff;
 }
 
+/* ============================= GLOBALS ========================= */
+
 body {
-	background: #dcccff;
+	background: var(--background);
 }
 
 header {
-	background: #932f6d;
+	background: var(--headings);
 	height: 10vh;
 	margin: 1rem;
 	display: flex;
@@ -23,13 +49,13 @@ header {
 }
 
 h1 {
-	color: #dcccff;
+	color: var(--h1h3);
 	font-weight: 500;
 }
 
 form {
 	height: 90vh;
-	background: #dcccff;
+	background: var(--background);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -49,12 +75,13 @@ input[type="integer"],
 input[type="email"],
 select,
 option {
+	background: var(--inputBack);
 	outline: none;
-	width: 14rem;
+	min-width: 14rem;
 	border-radius: 3px;
-	border: 1px solid rgba(147, 47, 109, 0.33);
+	border: 1px solid var(--borders);
 	padding: 3px 11px;
-	color: #420039;
+	color: var(--textInput);
 	font-weight: 400;
 }
 
@@ -67,14 +94,28 @@ select {
 }
 
 label {
-	color: #932f6d;
 	font-weight: 300;
 	margin-left: 1rem;
 	white-space: nowrap;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+	transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted],
+select[data-autocompleted] {
+	background-color: var(--inputBack) !important;
+}
+
+/* ============================= CLASSES  ========================= */
+
 #accordionContainer {
-	background: #dcccff;
+	background: var(--background);
 	border-radius: 0.5rem;
 	width: 100%;
 	height: auto;
@@ -94,13 +135,13 @@ label {
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem;
-	background: #932f6d;
-	color: #dcccff;
+	background: var(--headings);
+	color: var(--h1h3);
 	border-radius: 0.5rem;
 }
 
 #accordionContainer .accordion h3 span {
-	transform: rotate(90deg);
+	transform: rotate(270deg);
 	font-weight: 500;
 }
 
@@ -118,14 +159,84 @@ label {
 	padding-bottom: 1rem;
 	display: flex;
 	flex-direction: row;
+	width: fit-content;
 }
 
 #accordionContainer .accordion .content .contentItems .contentItemsLabel {
 	width: 150px;
 }
 
+#accordionContainer .accordion .accordionToggle.active span {
+	transform: rotate(90deg);
+}
 #accordionContainer .accordion .accordionToggle.active + .content {
 	height: 0;
 	overflow: hidden;
 	padding: 0;
+}
+
+/* ============================= SWITCH BUTTON  */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: var(--switchDark);
+}
+
+input:focus + .slider {
+	border: 1px solid var(--borders);
+	/* box-shadow: 0 0 1px var(--switchDark); */
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
 }

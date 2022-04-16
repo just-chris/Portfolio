@@ -14,22 +14,30 @@
  <title>Accordion HTML/CSS</title>
 </head>
 
-<body>
+<body id="bodyPage" class="bodyPage">
 
  <header>
   <h1>Accordion Form Sections</h1>
  </header>
 
+
+ <label class="switch">
+  <input type="checkbox" onclick="switchTheme()" id="switchInput">
+  <span class="slider round"></span>
+ </label>
+
  <form class="container">
 
   <div id="accordionContainer">
+
+
 
    <div class="accordion">
     <h3 class="accordionToggle">User Information: <span>&#x3e</span></h3>
     <div class="content">
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">First Name:</label>
+       <label id="label">First Name:</label>
       </div>
       <div class="contentItemsInput">
        <input type="text" name="" id="">
@@ -37,7 +45,7 @@
      </div>
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">Last Name:</label>
+       <label id="label">Last Name:</label>
       </div>
       <div class="contentItemsInput">
        <input type="text" name="" id="">
@@ -45,7 +53,7 @@
      </div>
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">ID:</label>
+       <label id="label">ID:</label>
       </div>
       <div class="contentItemsInput">
        <input type="integer" name="" id="" size="9">
@@ -53,7 +61,7 @@
      </div>
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">Gender:</label>
+       <label id="label">Gender:</label>
       </div>
       <div class="contentItemsInput">
        <select name="" id="">
@@ -70,7 +78,7 @@
 
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">E-mail:</label>
+       <label id="label">E-mail:</label>
       </div>
       <div class="contentItemsInput">
        <input type="email" name="" id="" placeholder="youremail@gmail.com">
@@ -86,15 +94,15 @@
     <div class="content">
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">Address:</label>
+       <label id="label">Address:</label>
       </div>
       <div class="contentItemsInput">
        <input type="text" name="" id="">
       </div>
      </div>
-     <div class="contentItems">
+     <div class=" contentItems">
       <div class="contentItemsLabel">
-       <label for="">APT:</label>
+       <label id="label">APT:</label>
       </div>
       <div class="contentItemsInput">
        <input type="integer" name="" id="" size="3">
@@ -102,7 +110,7 @@
      </div>
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">City:</label>
+       <label id="label">City:</label>
       </div>
       <div class="contentItemsInput">
        <input type="text" name="" id="">
@@ -110,7 +118,7 @@
      </div>
      <div class="contentItems">
       <div class="contentItemsLabel">
-       <label for="">Country:</label>
+       <label id="label">Country:</label>
       </div>
       <div class="contentItemsInput">
        <select name="" id="">
@@ -129,7 +137,7 @@
    </div>
 
    <div class="accordion">
-    <h3 for="thirdAcc">What is an accordion? <span>&#x3e</span></h3>
+    <h3 class="accordionToggle">Credit Card Info: <span>&#x3e</span></h3>
     <div class="content">
 
     </div>
