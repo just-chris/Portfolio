@@ -21,15 +21,17 @@
  </header>
 
 
- <label class="switch">
-  <input type="checkbox" onclick="switchTheme()" id="switchInput">
-  <span class="slider round"></span>
- </label>
 
- <form class="container">
+
+ <form class="container" id="myForm" method="post">
 
   <div id="accordionContainer">
-
+   <div class="switch" style="display: flex;width: 100%; justify-content: flex-end; padding-right: 1rem">
+    <label class="switch">
+     <input type="checkbox" onclick="switchTheme()" id="switchInput">
+     <span class="slider round"></span>
+    </label>
+   </div>
 
 
    <div class="accordion">
@@ -136,10 +138,11 @@
     </div>
    </div>
 
-   <div class="accordion">
-    <h3 class="accordionToggle">Credit Card Info: <span>&#x3e</span></h3>
-    <div class="content">
 
+   <div class="buttonContainer">
+    <div class="buttons">
+     <input type="submit" value="Submit" id="applyButton" onclick="submit( document.myForm )">
+     <input type="reset" value="Reset" id="applyButton">
     </div>
    </div>
 
