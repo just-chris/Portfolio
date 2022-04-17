@@ -11,7 +11,7 @@
 	--borders: rgba(147, 47, 109, 0.33);
 	--textInput: #420039;
 	--inputBack: #fff;
-	--switchLight: #c7adff;
+	--switchLight: #ecc1db;
 
 	/* =================== DARK MODE */
 
@@ -21,7 +21,6 @@
 	--labelsDark: #dcccff;
 	--textInputDark: #dcccff;
 	--switchDark: #932f6d;
-	--sliderDark: #3c3f7c;
 }
 
 * {
@@ -209,7 +208,7 @@ select[data-autocompleted] {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: var(--sliderDark);
+	background-color: var(--headings);
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -249,7 +248,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
 	border-radius: 50%;
-	background: var(--headings);
+	background: var(--background);
 }
 
 .buttonContainer {

@@ -1,3 +1,5 @@
+// ========================================= ACCORDION TOGGLE
+
 const accordion = document.getElementsByClassName("accordionToggle");
 
 for (i = 0; i < accordion.length; i++) {
@@ -6,20 +8,8 @@ for (i = 0; i < accordion.length; i++) {
 	});
 }
 
-// const style = document.documentElement.style;
+// ============================================== DARK MODE
 
-//const darkTheme = () => {
-// style.setProperty("var(--background)", "#0f1020");
-// style.setProperty("--labels", "#dcccff");
-// style.setProperty("--inputBack", "#212345");
-// style.setProperty("--borders", "rgba(255, 255, 255, 0.1)");
-// style.setProperty("--textInput", "#dcccff");
-
-// style.setProperty("--background", "#dcccff");
-// style.setProperty("--labels", "##932f6d");
-// style.setProperty("--inputBack", "#FFF");
-// style.setProperty("--borders", "rgba(147, 47, 109, 0.33)");
-// style.setProperty("--textInput", "#420039");
 let darkMode = localStorage.getItem("darkMode");
 
 const darkModeToggle = document.querySelector("#switchInput");
