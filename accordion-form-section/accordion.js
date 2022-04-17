@@ -1,5 +1,4 @@
 // ========================================= ACCORDION TOGGLE
-
 const accordion = document.getElementsByClassName("accordionToggle");
 
 for (i = 0; i < accordion.length; i++) {
@@ -10,7 +9,11 @@ for (i = 0; i < accordion.length; i++) {
 
 // ============================================== DARK MODE
 
-let darkMode = localStorage.getItem("darkMode");
+const darkMode = localStorage.getItem("darkMode");
+
+const colorTheme = localStorage.getItem("colorTheme");
+
+const colorInput = document.getElementById("colorInput");
 
 const darkModeToggle = document.querySelector("#switchInput");
 
@@ -36,5 +39,29 @@ darkModeToggle.addEventListener("click", () => {
 	} else {
 		disableDarkMode();
 		console.log(darkMode);
+	}
+});
+
+colorInput.addEventListener("change", (e) => {
+	if (e.target.value === "OpenText") {
+		document.body.classList.remove("techintTheme");
+		document.body.classList.remove("orangeTheme");
+		document.body.classList.remove("greenTheme");
+		document.body.classList.add("OT");
+	} else if (e.target.value === "TECHINT") {
+		document.body.classList.remove("orangeTheme");
+		document.body.classList.remove("OT");
+		document.body.classList.remove("greenTheme");
+		document.body.classList.add("techintTheme");
+	} else if (e.target.value === "Orange") {
+		document.body.classList.remove("techintTheme");
+		document.body.classList.remove("OT");
+		document.body.classList.remove("greenTheme");
+		document.body.classList.add("orangeTheme");
+	} else if (e.target.value === "Green") {
+		document.body.classList.remove("techintTheme");
+		document.body.classList.remove("OT");
+		document.body.classList.remove("orangeTheme");
+		document.body.classList.add("greenTheme");
 	}
 });
