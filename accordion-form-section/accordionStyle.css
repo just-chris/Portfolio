@@ -21,6 +21,7 @@
 	--labelsDark: #dcccff;
 	--textInputDark: #dcccff;
 	--switchDark: #932f6d;
+	--sliderDark: #3c3f7c;
 }
 
 * {
@@ -97,6 +98,7 @@ label {
 	font-weight: 300;
 	margin-left: 1rem;
 	white-space: nowrap;
+	color: var(--labels);
 }
 
 input:-webkit-autofill,
@@ -185,6 +187,13 @@ select[data-autocompleted] {
 	height: 34px;
 }
 
+.switchContainer {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	padding-right: 1rem;
+}
+
 /* Hide default HTML checkbox */
 .switch input {
 	opacity: 0;
@@ -200,7 +209,7 @@ select[data-autocompleted] {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: var(--sliderDark);
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -230,6 +239,7 @@ input:checked + .slider:before {
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
+	background: var(--background);
 }
 
 /* Rounded sliders */
@@ -239,6 +249,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
 	border-radius: 50%;
+	background: var(--headings);
 }
 
 .buttonContainer {
@@ -271,4 +282,12 @@ input:checked + .slider:before {
 #applyButton:focus {
 	background: #bb3a8e;
 	transform: scale(1.07);
+}
+
+.darkmode {
+	--background: var(--backgroundDark);
+	--labels: var(--labelsDark);
+	--textInput: var(--textInputDark);
+	--inputBack: var(--inputBackDark);
+	--borders: var(--bordersDark);
 }
