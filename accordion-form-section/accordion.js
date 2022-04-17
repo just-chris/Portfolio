@@ -9,9 +9,9 @@ for (i = 0; i < accordion.length; i++) {
 
 // ============================================== DARK MODE
 
-const darkMode = localStorage.getItem("darkMode");
+let darkMode = localStorage.getItem("darkMode");
 
-const colorTheme = localStorage.getItem("colorTheme");
+let colorTheme = localStorage.getItem("colorTheme");
 
 const colorInput = document.getElementById("colorInput");
 

@@ -57,7 +57,7 @@
 	--headingsGreen: #469b46;
 	--labelsGreen: #193819;
 	--buttonHoverGreen: #56b356;
-	--bordersGreen: rgba(70, 155, 70, 0.3);
+	--bordersGreen: rgba(70, 155, 70, 0.5);
 }
 
 /* ============================= UNIVERSAL ========================= */
@@ -148,10 +148,10 @@ div {
 	-o-user-select: none;
 }
 
-input[type="text"],
-input[type="integer"],
-input[type="email"],
+input,
 select,
+select:focus,
+select:active,
 option,
 textarea {
 	background: var(--inputBack);
@@ -173,7 +173,6 @@ option:focus {
 label {
 	font-weight: 400;
 	margin-left: 1rem;
-	white-space: nowrap;
 	color: var(--labels);
 }
 
@@ -189,6 +188,14 @@ select:-webkit-autofill:active {
 input[data-autocompleted],
 select[data-autocompleted] {
 	background-color: var(--inputBack) !important;
+}
+
+.currency::after {
+	content: USD;
+}
+
+.currency::after {
+	content: "USD";
 }
 
 /* ============================= CLASSES  ========================= */
@@ -261,7 +268,7 @@ select[data-autocompleted] {
 #accordionContainer .accordion .content .contentItems .contentItemsDual {
 	padding-bottom: 1rem;
 	display: grid;
-	grid-template-columns: 15rem 1fr;
+	grid-template-columns: 1fr 1fr;
 	width: auto;
 }
 
@@ -271,7 +278,7 @@ select[data-autocompleted] {
 	.contentItems
 	.contentItemsDual
 	.contentItemsLabel {
-	width: 15rem;
+	width: 25rem;
 	display: flex;
 	flex-direction: row;
 	padding-right: 1rem;
@@ -421,6 +428,7 @@ input:checked + .slider:before {
 	--inputBack: var(--inputBackDark);
 	--borders: var(--bordersDark);
 	--bordersOrange: rgba(255, 127, 17, 0.2);
+	--bordersGreen: rgba(70, 155, 70, 0.2);
 }
 
 .OT {
