@@ -268,7 +268,7 @@ select[data-autocompleted] {
 #accordionContainer .accordion .content .contentItems .contentItemsDual {
 	padding-bottom: 1rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 0.5fr 1fr;
 	width: auto;
 }
 
@@ -282,6 +282,15 @@ select[data-autocompleted] {
 	display: flex;
 	flex-direction: row;
 	padding-right: 1rem;
+}
+
+#accordionContainer
+	.accordion
+	.content
+	.contentItems
+	.contentItemsDual
+	.contentItemsInput {
+	white-space: nowrap;
 }
 
 #accordionContainer .accordion .accordionToggle.active span {
