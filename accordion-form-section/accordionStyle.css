@@ -190,14 +190,6 @@ select[data-autocompleted] {
 	background-color: var(--inputBack) !important;
 }
 
-.currency::after {
-	content: USD;
-}
-
-.currency::after {
-	content: "USD";
-}
-
 /* ============================= CLASSES  ========================= */
 
 .techintLogo {
@@ -212,10 +204,6 @@ select[data-autocompleted] {
 .hiddenSection {
 	display: none;
 }
-
-/* .nowrap {
-      white-space: nowrap;
-    } */
 
 #accordionContainer {
 	background: var(--background);
