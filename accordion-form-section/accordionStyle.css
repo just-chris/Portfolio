@@ -108,7 +108,7 @@ body {
 
 /* ============================= GLOBALS ========================= */
 
-header {
+.header {
 	background: var(--headings);
 	height: auto;
 	margin: 1rem;
