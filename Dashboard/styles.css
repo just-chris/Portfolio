@@ -1,0 +1,184 @@
+
+/* ================== UNIVERSAL */
+
+* {
+ margin: 0;
+ padding: 0;
+ outline: 0;
+ appearance: none;
+ border: 0;
+ text-decoration: none;
+ list-style: none;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+
+
+/* ================== ROOT */
+
+:root {
+
+ /* ================== COLORS */
+
+ --primary-color: #7380ec;
+ --success-color: #41f1b6;
+ --warning-color: #ffbb55;
+ --white-color: #fff;
+ --info-dark-color: #7d8da1;
+ --info-light-color: #dce1eb;
+ --dark-color: #363949;
+ --light-color: rgba(132, 139, 200, 0.18);
+ --primary-variant-color: #111e88;
+ --dark-variant-color: #677483;
+ --bg-color: #f6f6f9;
+
+  /* ================== PROPERTIES */
+
+
+ --profile-photo: 2.8rem;
+ --smaller-font: 0.74rem;
+ --small-font: 0.77rem;
+ --regular-font: 0.88rem;
+ --regular-font-small: 0.8rem;
+ --large-font: 1.4rem;
+ --extra-large-font: 1.8rem;
+ --card-border-radius: 2rem;
+ --border-radius-one:  0.4rem;
+ --border-radius-two: 0.8rem;
+ --border-radius-three: 1.2rem;
+ --card-padding: 1.8rem;
+ --padding-one: 1.2rem;
+ --box-shadow: 0 2rem 3rem var(--light-color);
+}
+
+
+/* ================== MAIN ELEMENTS */
+
+html {
+ font-size: var(--regular-font);
+}
+
+body {
+ width: 100vw;
+ height: 100vh;
+ background: var(--bg-color);
+ user-select: none;
+ overflow-x: hidden;
+}
+
+a {
+ color: var(--dark-color);
+}
+
+img {
+ display: block;
+ width: 100%;
+}
+
+h1 {
+ font-weight: 800;
+ font-size: var(--extra-large-font);
+}
+
+h2 {
+ font-size: var(--large-font);
+}
+
+h3 {
+ font-size: var(--regular-font);
+}
+
+h4 {
+ font-size: var(--regular-font-small);
+}
+
+h5 {
+ font-size: var(--small-font);
+}
+
+small {
+font-size: var(--small-font);
+}
+
+p {
+ color:var(--dark-variant-color);
+}
+
+b {
+ color:var(--dark-color);
+}
+
+ aside {
+height: 100vh;
+background: gray;
+} 
+
+aside .top-bar {
+ background: white;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin-top: var(--large-font);
+}
+aside .top-bar .logo {
+ background: gray;
+}
+
+aside .top-bar .logo img {
+ height: 2rem;
+ width: auto;
+}
+
+
+
+
+
+
+/* ================== REUSABLE CLASSES */
+
+.main-container {
+ display: grid;
+ width: 96%;
+ margin: 0 auto;
+ gap: 1.8rem;
+ grid-template-columns: 14rem auto 23rem;
+}
+
+.centered {
+ display: grid;
+ place-items: center;
+}
+
+.close-icon {
+ display: none;
+}
+
+/* .sidebar-link {
+ 
+ padding: 0.3rem 0rem;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+gap: 2.7rem;
+} */
+
+.profile-photo{ 
+ width: var(--profile-photo);
+ height: var(--profile-photo);
+ border-radius: 50%;
+ overflow: hidden;
+}
+
+.muted {
+ color: var(--info-dark-color);
+}
+
+.primary {
+ color: var(--primary-color);
+}
+.success {
+ color: var(--success-color);
+}
+.warning {
+ color: var(--warning-color);
+}
