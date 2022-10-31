@@ -616,7 +616,7 @@ border-bottom: 1px solid var(--info-light-color);
 
  main .insights {
   grid-template-columns: 1fr;
-  gap: 0;
+  gap: 1.2rem;
  }
 
  main .recent-order {
@@ -732,4 +732,17 @@ left: 74%;
   font-size: 2rem;
  }
 
+}
+
+
+.pending {
+ color: var(--warning-color);
+}
+
+.delivered {
+ color: var(--success-color);
+}
+
+.returned {
+ color: var(--notif-color);
 }
